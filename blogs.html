@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Abul Basar (a.k.a. basharkhan6)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Blogs - Abul Basar (a.k.a. basharkhan6)</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/blog.css">
@@ -12,31 +12,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Mono:wght@400;600&Comic+Neue:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="blog-nav">
-    <div class="txt-logo txt-blog-logo">{ <a href="#home">AbulBasar<i>.</i><span class="">blog</span></a> }</div>
-    <div class="blog-menu">
+
+<section class="blog-nav">
+    <div class="txt-logo txt-blog-logo">{ <a href="#">AbulBasar<i>.</i><span class="">blog</span></a> }</div>
+    <div class="menu">
         <ul>
-            <li><a href="index.html">// home</a></li>
+            <li><a href="index.html">// basar</a></li>
             <li><a href="#">// java</a></li>
             <li><a href="#">// spring</a></li>
-            <li><a href="#">// jpa</a></li>
+            <li><a href="#">// ops</a></li>
         </ul>
     </div>
-</div>
-
-<div class="blog-banner">
-    <h1 class="blog-banner-txt">
-        Latest articles on <span>Java</span>, <span>Spring</span>, <span>JPA</span> and more...
-    </h1>
-    <div class="blog-side-banner">
-        <img src="img/blog/blog-side-banner.jpg" alt="Blog Side Banner">
+    <div onclick="toggleMobileMenu()" class="mobile-menu-btn">☰</div>
+    <div onclick="toggleMobileMenu()" id="mobile-menu" class="mobile-menu hide">
+        <ul>
+            <li><a href="index.html">// basar</a></li>
+            <li><a href="#">// java</a></li>
+            <li><a href="#">// spring</a></li>
+            <li><a href="#">// ops</a></li>
+        </ul>
     </div>
-</div>
+</section>
 
-<hr style="width: 50%; margin-left: 25%; margin-top: 2%">
+<section class="blog-banner">
+    <div class="blog-banner-txt">
+        <h1>
+            Latest articles on <span>Java</span>, <span>Spring</span>, <span>DevOps</span> and more...
+        </h1>
+    </div>
+    <div class="blog-side-banner">
+        <img style="width: 100%;" src="img/blog/blog-side-banner.jpg" alt="Blog Side Banner">
+    </div>
+</section>
 
-<div class="blog-list-container">
-    <div class="list-item">
+<hr style="width: 50%; margin: 1.125rem 25%;">
+
+<section class="blog-list-container">
+    <a href="blogs/how-to-works-with-files-in-java.html" class="list-item">
         <div class="item-poster-area">
             <img class="item-poster" src="img/blog/blog-poster.webp" alt="Blog Poster">
         </div>
@@ -45,8 +57,9 @@
             <div class="item-author">ABUL BASAR | 25<sup>th</sup> March 2024</div>
             <p class="item-text">In this article, we’ll discuss all that entails KDoc in Kotlin. KDoc is simply a language used to document code written in Kotlin specifically. KDoc allows us to provide documentation comments for classes, functions, properties and other elements in our code. It’s the same as Javadoc which is used to document JAVA language. Essentially, KDoc combines syntax in Javadoc for the block tags and markdown for inline markup.</p>
         </div>
-    </div>
-</div>
+    </a>
+</section>
 
+<script src="js/script.js"></script>
 </body>
 </html>

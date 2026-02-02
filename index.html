@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>Abul Basar (a.k.a. basharkhan6) - Software Engineer</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
@@ -12,15 +12,25 @@
 </head>
 <body>
 
-<div id="home" class="home">
+<section id="home" class="home-nav">
     <div class="txt-logo">{ <a href="#home">AbulBasar<i>.</i><span>_</span></a> }</div>
-    <div class="primary-menu">
+    <div class="menu">
         <ul>
             <li><a href="#home">// home</a></li>
-            <li><a href="#">// experience</a></li>
-            <li><a href="#">// skills</a></li>
-            <li><a href="./blog.html">// blog</a></li>
-            <li><a href="#">// contact</a></li>
+            <li><a href="#expertise">// expertise</a></li>
+            <li><a href="#experience">// experience</a></li>
+            <li><a href="./blogs.html">// blog</a></li>
+            <li><a href="#contact">// contact</a></li>
+        </ul>
+    </div>
+    <div onclick="toggleMobileMenu()" class="mobile-menu-btn">☰</div>
+    <div onclick="toggleMobileMenu()" id="mobile-menu" class="mobile-menu hide">
+        <ul>
+            <li><a href="#home">// home</a></li>
+            <li><a href="#expertise">// expertise</a></li>
+            <li><a href="#experience">// experience</a></li>
+            <li><a href="./blogs.html">// blog</a></li>
+            <li><a href="#contact">// contact</a></li>
         </ul>
     </div>
 
@@ -28,7 +38,235 @@
         <h1 class="name">ABUL BASAR</h1>
         <h2 class="title">SOFTWARE ENGINEER</h2>
     </div>
-</div>
+</section>
 
+
+<section id="expertise" class="expertise">
+    <h2>Expertise</h2>
+
+    <div class="service-box-container">
+        <div class="service-box">
+            <div class="service-title">
+                <span>💻</span>
+                <h3>Software Development</h3>
+            </div>
+            <hr>
+            <div class="service-detail">
+                Delivering tailored web and mobile apps with seamless API integrations. I ensure high security, peak performance, and reliable delivery through fully automated and robust CI/CD pipelines.            </div>
+        </div>
+        <div class="service-box">
+            <div class="service-title">
+                <span>🧑‍💻</span>
+                <h3>Software Consultant</h3>
+            </div>
+            <hr>
+            <div class="service-detail">
+                Providing expert guidance on system design, digital transformation, and cloud migration. I specialize in roadmap planning and feasibility studies to turn complex ideas into viable products.            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="experience" class="experience">
+    <h2>Professional <br> Experience</h2>
+    <div id="experience-list" class="experience-list">
+        <div class="item">
+            <div onclick="showJobDetail(0)" class="job-header">
+                <div class="job-title">Senior Software Engineer @ Enosis Solutions</div>
+                <div class="job-duration">Nov, 2022 - Present</div>
+            </div>
+
+            <div class="wrapper hide">
+                <div class="job-detail">
+                    <div class="about-company">
+                        <div class="company-location">
+                            <span class="icon">⚲</span>
+                            Dhaka, BD
+                        </div>
+                        <div class="company-url">
+                            <span class="icon">↗</span>
+                            <a href="https://enosisbd.com" target="_blank" rel="nofollow noopener noreferrer">https://enosisbd.com</a>
+                        </div>
+                    </div>
+
+                    <div class="job-description-container">
+                        <div class="job-description">
+                            Designed of a custom Java framework on Spring Boot and engineered high-scale distributed data systems. I also architected monitoring for Lambda to ensure cloud reliability. Beyond coding, I led reviews to maintain quality, collaborated with global teams, and implemented rigorous security standards like GDPR and HIPAA to ensure full compliance and data integrity.
+                        </div>
+                        <div class="company-logo">
+                            <img style="width: 100%" src="img/enosis-logo.png" alt="Enosis Solutions Logo">
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <div class="tag">Java</div>
+                        <div class="tag">Spring Boot</div>
+                        <div class="tag">Kafka</div>
+                        <div class="tag">Redis</div>
+                        <div class="tag">RocksDB</div>
+                        <div class="tag">PostgreSQL</div>
+                        <div class="tag">JUnit</div>
+                        <div class="tag">AWS</div>
+                        <div class="tag">IAM</div>
+                        <div class="tag">EC2</div>
+                        <div class="tag">Lambda</div>
+                        <div class="tag">S3</div>
+                        <div class="tag">Prometheus</div>
+                        <div class="tag">Docker</div>
+                        <div class="tag">ELK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div onclick="showJobDetail(1)" class="job-header">
+                <div class="job-title">Software Engineer @ Workspace Infotech Ltd.</div>
+                <div class="job-duration">Jan, 2021 - Oct, 2022</div>
+            </div>
+
+            <div class="wrapper hide">
+                <div class="job-detail">
+                    <div class="about-company">
+                        <div class="company-location">
+                            <span class="icon">⚲</span>
+                            Dhaka, BD
+                        </div>
+                        <div class="company-url">
+                            <span class="icon">↗</span>
+                            <a href="https://www.workspaceit.com" target="_blank" rel="nofollow noopener noreferrer">https://www.workspaceit.com/</a>
+                        </div>
+                    </div>
+
+                    <div class="job-description-container">
+                        <div class="job-description">
+                            Managed the deployment of Real-Estate CRM microservices via CI/CD and engineered a three-layer scraping protection system. I enhanced the platform by building a PDF editor, map integrations, and WebSockets for real-time updates. By automating PEPPOL invoicing and integrating Twilio and Authorize.net, I optimized operations while ensuring security through granular, user-specific permissions.
+                        </div>
+                        <div class="company-logo">
+                            <img style="width: 100%" src="img/wsit-logo.png" alt="Workspace Infotech Ltd. Logo">
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <div class="tag">Java</div>
+                        <div class="tag">Spring</div>
+                        <div class="tag">Python</div>
+                        <div class="tag">Django</div>
+                        <div class="tag">Angular</div>
+                        <div class="tag">PrimeNG</div>
+                        <div class="tag">OAuth</div>
+                        <div class="tag">ElasticSearch</div>
+                        <div class="tag">Linux</div>
+                        <div class="tag">nginx</div>
+                        <div class="tag">Jenkins</div>
+                        <div class="tag">AWS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div onclick="showJobDetail(2)" class="job-header">
+                <div class="job-title">Jr. Software Engineer @ Quintet Technology Ltd.</div>
+                <div class="job-duration">Jul 2020 - Dec 2020</div>
+            </div>
+
+            <div class="wrapper hide">
+                <div class="job-detail">
+                    <div class="about-company">
+                        <div class="company-location">
+                            <span class="icon">⚲</span>
+                            Dhaka, BD
+                        </div>
+                        <div class="company-url">
+                            <span class="icon">↗</span>
+                            <a href="https://www.facebook.com/Quiintet" target="_blank" rel="nofollow noopener noreferrer">https://www.facebook.com/Quiintet</a>
+                        </div>
+                    </div>
+
+                    <div class="job-description-container">
+                        <div class="job-description">
+                            Built Java-based MediTech and management apps. Specialized in full-stack development using Angular, REST APIs, and secure authentication to manage complex database systems.
+                        </div>
+                        <div class="company-logo">
+                            <img style="width: 100%" src="img/quintet-logo.png" alt="Quintet Technology Ltd. Logo">
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <div class="tag">Java</div>
+                        <div class="tag">Spring</div>
+                        <div class="tag">MySQL</div>
+                        <div class="tag">Angular</div>
+                        <div class="tag">REST API</div>
+                        <div class="tag">JWT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div onclick="showJobDetail(3)" class="job-header">
+                <div class="job-title">Jr. Software Developer @ DML Worldwide Express</div>
+                <div class="job-duration">Jan 2020 - Jul 2020</div>
+            </div>
+
+            <div class="wrapper hide">
+                <div class="job-detail">
+                    <div class="about-company">
+                        <div class="company-location">
+                            <span class="icon">⚲</span>
+                            Dhaka, BD
+                        </div>
+                        <div class="company-url">
+                            <span class="icon">↗</span>
+                            <a href="https://www.dml.com.bd" target="_blank" rel="nofollow noopener noreferrer">https://www.dml.com.bd</a>
+                        </div>
+                    </div>
+
+                    <div class="job-description-container">
+                        <div class="job-description">
+                            Built a warehouse barcode scanning system and optimized raw PHP courier software. Managed full-cycle website design and maintenance to ensure high performance and reliability.
+                        </div>
+                        <div class="company-logo">
+                            <img style="width: 100%" src="img/dml-logo.webp" alt="DML Worldwide Express Logo">
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <div class="tag">HTML</div>
+                        <div class="tag">CSS</div>
+                        <div class="tag">JavaScript</div>
+                        <div class="tag">jQuery</div>
+                        <div class="tag">MySQL</div>
+                        <div class="tag">PHP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <div class="email">
+        basharkhan6@gmail.com
+    </div>
+    <div>
+        <a href="https://www.linkedin.com/in/abulbasar7/" target="_blank">Linkedin</a>
+    </div>
+    <div>
+        <a href="https://www.facebook.com/basharkhan6" target="_blank" rel="nofollow noopener noreferrer">Facebook</a>
+    </div>
+    <div>
+        <a href="https://github.com/basharkhan6" target="_blank" rel="nofollow noopener noreferrer">GitHub</a>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+<script>
+    showJobDetail();    // show first job details
+</script>
 </body>
 </html>

@@ -239,9 +239,9 @@ a {
                         color: var(--button-color);
                         font-size: 1.2rem;
                     }
-                    .company-url {
-                        overflow-wrap: break-word;
-                        a:hover {
+                    .company-url a {
+                        overflow-wrap: anywhere;
+                        &:hover {
                             color: var(--primary-color);
                         }
                     }

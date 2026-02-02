@@ -106,7 +106,7 @@ a {
             font-family: 'Poppins', sans-serif;
             font-size: 8rem;
             font-weight: 600;
-            @media (max-width: 600px) {font-size: 6rem;}
+            @media (max-width: 600px) {font-size: 5rem;}
         }
         .title {
             font-family: 'Roboto Mono', monospace;
@@ -235,14 +235,18 @@ a {
                         text-align: left;
                         gap: 0.5rem;
                     }
-                    .company-location .icon, .company-url .icon {
-                        color: var(--button-color);
-                        font-size: 1.2rem;
-                    }
-                    .company-url a {
-                        overflow-wrap: anywhere;
-                        &:hover {
-                            color: var(--primary-color);
+                    .company-location, .company-url {
+                        display: flex;
+                        gap: 0.5rem;
+                        .icon {
+                            color: var(--button-color);
+                            font-size: 1.2rem;
+                        }
+                        a {
+                            overflow-wrap: anywhere;
+                            &:hover {
+                                color: var(--primary-color);
+                            }
                         }
                     }
                 }

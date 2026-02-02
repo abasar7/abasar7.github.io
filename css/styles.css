@@ -239,8 +239,11 @@ a {
                         color: var(--button-color);
                         font-size: 1.2rem;
                     }
-                    .company-url a:hover {
-                        color: var(--primary-color);
+                    .company-url {
+                        overflow-wrap: break-word;
+                        a:hover {
+                            color: var(--primary-color);
+                        }
                     }
                 }
 

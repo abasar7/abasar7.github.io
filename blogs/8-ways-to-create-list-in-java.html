@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>8 Ways To Create List in Java | Blog - Abul Basar</title>
+  <meta name="author" content="Abul Basar">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/blog.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Mono:wght@400;600&Comic+Neue:wght@700&Inter:wght@100...900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="blog-nav">
+  <div class="txt-logo txt-blog-logo">{ <a href="../blogs.html">AbulBasar<i>.</i><span class="">blog</span></a> }</div>
+  <div class="menu">
+    <ul>
+      <li><a href="../index.html">// basar</a></li>
+      <li><a href="#">// java</a></li>
+      <li><a href="#">// spring</a></li>
+      <li><a href="#">// ops</a></li>
+    </ul>
+  </div>
+  <div onclick="toggleMobileMenu()" class="mobile-menu-btn">☰</div>
+  <div onclick="toggleMobileMenu()" id="mobile-menu" class="mobile-menu hide">
+    <ul>
+      <li><a href="../index.html">// basar</a></li>
+      <li><a href="#">// java</a></li>
+      <li><a href="#">// spring</a></li>
+      <li><a href="#">// ops</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="blog-details">
+  <h3 class="blog-title">8 Ways To Create List in Java</h3>
+  <div class="blog-author">ABUL BASAR | 18<sup>th</sup> Jun 2025</div>
+  <hr style="width: 50%; margin: 1.125rem 25%;">
+
+  <div class="blog-poster-area">
+    <img class="blog-poster" src="../img/blog/8-ways-to-create-list-in-java/poster.png" alt="8 Ways Create List in Java Poster">
+  </div>
+
+  <div class="blog-content">
+    <div class="heading">8 Ways to Create a List in Java: From Mutable to Immutable</div>
+    Java offers a surprising variety of ways to initialize a list. Choosing the right one depends on whether you need to modify the data later or if you want to ensure the list remains "read-only."
+    <br>
+    Here are 8 common methods to get the job done, categorized by their mutability.
+    <br>
+
+    <div class="heading-2">Mutable Lists (Modifiable)</div>
+    These lists allow you to add, remove, or update elements after initialization.
+    <div class="sub-heading">1. The Classic ArrayList</div>
+    The most common approach. It’s simple, efficient, and fully modifiable.
+<code>List&lt;String&gt; mutableList = new ArrayList<>();
+mutableList.add("E1");
+mutableList.add("E2");</code>
+
+    <div class="sub-heading">2. Arrays.asList() (The "Hybrid")</div>
+     This creates a list backed by the original array. While you can update existing elements, you cannot add or remove elements (it will throw an UnsupportedOperationException).
+<code>List&lt;String&gt; listBackedByArrays = Arrays.asList("E1", "E2");</code>
+
+    <div class="sub-heading">3. Double-Brace Initialization</div>
+    An older "hack" that creates an anonymous inner class. While concise, it's often discouraged because it can lead to memory leaks and unnecessary class creation.
+<code>List&lt;String&gt; cities = new ArrayList<>() {{
+add("New York");
+add("Rio");
+add("Tokyo");
+}};</code>
+
+    <div class="sub-heading">4. Java Streams (Collectors.toList)</div>
+    Ideal when you are transforming or filtering data. By default, Collectors.toList() usually returns a mutable ArrayList, though this isn't strictly guaranteed by the spec.
+<code>List&lt;String&gt; list = Stream.of("foo", "bar").collect(Collectors.toList());</code>
+
+    <div class="heading-2">Immutable Lists (Read-Only)</div>
+    Use these when you want to prevent any changes to the collection, ensuring thread safety and data integrity.
+
+    <div class="sub-heading">5. Collections.unmodifiableList</div>
+     This acts as a wrapper. It takes an existing mutable list and returns a read-only view of it.
+<code>List&lt;Integer&gt; unmodif = Collections.unmodifiableList(new ArrayList<>());</code>
+
+    <div class="sub-heading">6. Collections.singletonList</div>
+    A memory-efficient way to create a list containing exactly one element. It is immutable and fixed-size.
+<code>List&lt;String&gt; singleValueList = Collections.singletonList("E1");</code>
+
+    <div class="sub-heading">7. List.of() (The Modern Standard)</div>
+    Introduced in Java 9, this is the cleanest way to create small, immutable lists. It’s concise and highly optimized.
+<code>List&lt;String&gt; immutableListJava9 = List.of("E1", "E2");</code>
+
+    <div class="sub-heading">8. Stream.toUnmodifiableList()</div>
+    Introduced in Java 10, this allows you to process a stream and ensure the final result is strictly immutable.
+<code>List&lt;Integer&gt; list = Stream.of(42).collect(Collectors.toUnmodifiableList());</code>
+  </div>
+</section>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

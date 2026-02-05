@@ -212,7 +212,7 @@ a {
             .wrapper {
                 max-height: 800px;  /* required for transition */
                 overflow: hidden;
-                transition: max-height 1s ease;
+                transition: max-height 1s ease-out;
                 &.hide {
                     max-height: 0;
                 }

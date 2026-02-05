@@ -279,7 +279,9 @@
 
 <script src="js/script.js" defer></script>
 <script>
-    window.onload(() => showJobDetail());    // show first job details
+    window.addEventListener('load', function() {
+        showJobDetail();    // show first job details
+    });
 </script>
 </body>
 </html>

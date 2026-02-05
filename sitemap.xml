@@ -7,20 +7,19 @@
 
 
 <url>
-  <loc>https://basharkhan6.github.io/</loc>
+  <loc>https://abasar.dev/</loc>
   <lastmod>2023-10-15T23:21:58+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://basharkhan6.github.io/blog.html</loc>
+  <loc>https://abasar.dev/blogs</loc>
+  <lastmod>2023-10-15T23:21:58+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://abasar.dev/blogs/8-ways-to-create-list-in-java/</loc>
   <lastmod>2023-10-15T23:21:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://basharkhan6.github.io/index.html</loc>
-  <lastmod>2023-10-15T23:21:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
 
 </urlset>
